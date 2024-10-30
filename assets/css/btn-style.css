@@ -1,0 +1,35 @@
+.whats-btn{
+    position: fixed;
+    bottom: var(--button-bottom); /*10px */
+    z-index: 9999;
+}
+
+.whats-btn.right{
+    right: var(--button-distance);/*20px */
+}
+
+.whats-btn.left{
+    left: var(--button-distance);/*20px */
+}
+
+.whats-btn.animate-jump{
+    animation: lp-jump 2s infinite;
+}
+
+.whats-btn.animate-zoom{
+    animation: lp-zoom 2s infinite;
+}
+
+.whats-btn a img{
+    width: var(--button-size);
+}
+
+@keyframes lp-jump {
+    0%,100%{bottom: var(--button-bottom);}
+    50%{bottom: calc(var(--button-bottom) + 10px);}
+}
+
+@keyframes lp-zoom {
+    0%,100%{transform: scale(0.9);}
+    50%{transform: scale(1.1);}
+}
